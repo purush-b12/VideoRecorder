@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/quality_sd"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/quality_hd"
+        android:text="SD"
+        android:gravity="center"
+        android:padding="2dp"
+        style="@style/TextviewAppearance.Home.NotSelected"/>
+
+    <TextView
+        android:id="@+id/quality_hd"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/quality_sd"
+        app:layout_constraintEnd_toStartOf="@id/quality_fhd"
+        android:text="HD"
+        android:gravity="center"
+        android:padding="2dp"
+        style="@style/TextviewAppearance.Home.NotSelected"/>
+    <TextView
+        android:id="@+id/quality_fhd"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/quality_hd"
+        app:layout_constraintEnd_toStartOf="@id/quality_uhd"
+        android:text="FHD"
+        android:gravity="center"
+        android:padding="2dp"
+        style="@style/TextviewAppearance.Home.NotSelected" />
+
+    <TextView
+        android:id="@+id/quality_uhd"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/quality_fhd"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="UHD"
+        android:gravity="center"
+        android:padding="2dp"
+        style="@style/TextviewAppearance.Home.NotSelected" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

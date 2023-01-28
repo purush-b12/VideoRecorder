@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Dance Video Recorder</string>
+    <string name="app_name">Hi Camera</string>
     <string name="title_splash_screen">SplashScreen</string>
-    <string name="title_recorder">Recorder</string>
-    <string name="title_videos">Videos</string>
+    <string name="title_recorder">Camera</string>
+    <string name="title_videos">Media</string>
     <string name="title_settings">Settings</string>
 </resources>

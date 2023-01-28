@@ -1,13 +1,26 @@
 package com.android.hopein.dancevideorecorder.ui.home
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.android.hopein.dancevideorecorder.common.CommonUtils
+import com.android.hopein.dancevideorecorder.sdk.repository.RepositoryImpl
 
 class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    private val videoContentLiveData: MutableLiveData<List<CommonUtils.Video>> = MutableLiveData<List<CommonUtils.Video>>()
+    private val photoContentLiveData: MutableLiveData<List<CommonUtils.Photo>> = MutableLiveData<List<CommonUtils.Photo>>()
+
+
+    fun getVideoContentDetails(context: Context, getAllMediaList: Boolean): LiveData<List<CommonUtils.Video>> {
+        RepositoryImpl.videoContent(videoContentLiveData,context, getAllMediaList)
+
+        return videoContentLiveData
     }
-    val text: LiveData<String> = _text
+
+    fun getPhotoContentDetails(context: Context, getAllMediaList: Boolean): LiveData<List<CommonUtils.Photo>> {
+        RepositoryImpl.photoContent(photoContentLiveData,context, getAllMediaList, 0)
+        return photoContentLiveData
+    }
 }

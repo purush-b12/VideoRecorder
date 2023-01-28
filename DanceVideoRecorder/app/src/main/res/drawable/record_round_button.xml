@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!--pressed state. -->
-    <item android:state_pressed="true">
+    <item>
         <shape android:shape="rectangle">
-            <stroke android:color="@color/gray_500" android:width="5dp"/>
+            <stroke android:color="@color/white" android:width="35dp"/>
             <corners android:radius="999dp" />
-            <solid android:color="@color/gray_700" />
+            <solid android:color="@null" />
         </shape>
     </item>
-
-    <!--released state. -->
-    <item android:state_pressed="false">
-        <shape android:shape="rectangle">
-            <stroke android:color="@color/white" android:width="5dp"/>
-            <corners android:radius="999dp" />
-            <solid android:color="@color/pink_600" />
-        </shape>
-    </item>
-
-
 </layer-list>

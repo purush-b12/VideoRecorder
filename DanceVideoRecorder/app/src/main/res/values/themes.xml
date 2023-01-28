@@ -1,44 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Shrine" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <!--<item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryVariant">@color/reply_blue_800</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
 
-        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorSecondary">@color/new_secondary</item>
+        <item name="colorSecondaryVariant">@color/new_secondary</item>
 
-        <item name="android:colorBackground">@color/colorBackground</item>
-        <item name="colorSurface">@color/colorSurface</item>
-
-        <item name="colorOnPrimary">@color/colorOnPrimary</item>
-        <item name="colorOnSecondary">@color/colorOnSecondary</item>
-        <item name="colorOnBackground">@color/colorOnBackground</item>
-        <item name="colorOnSurface">@color/colorOnSecondary</item>
-
-        <item name="colorError">@color/colorError</item>
-        <item name="colorOnError">@color/colorOnError</item>-->
-
-        <item name="colorPrimary">@color/reply_blue_700</item>
-        <item name="colorPrimaryVariant">@color/reply_blue_800</item>
-        <item name="colorSecondary">@color/colorPrimaryDark</item>
-        <item name="colorSecondaryVariant">@color/colorPrimaryDark</item>
-
-        <item name="android:colorBackground">@color/reply_blue_50</item>
+        <item name="android:colorBackground">@color/white</item>
         <item name="colorSurface">@color/reply_white_50</item>
         <item name="colorError">@color/reply_red_400</item>
 
         <item name="colorOnPrimary">@color/reply_white_50</item>
-        <item name="colorOnSecondary">@color/reply_black_900</item>
-        <item name="colorOnBackground">@color/reply_black_900</item>
-        <item name="colorOnSurface">@color/reply_black_900</item>
-        <item name="colorOnError">@color/reply_black_900</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorOnError">@color/white</item>
 
-        <item name="scrimBackground">@color/reply_white_50_alpha_060</item>
-        <item name="android:statusBarColor">@color/reply_blue_50_alpha_060</item>
+       <!-- <item name="scrimBackground">@color/reply_white_50_alpha_060</item>-->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
 
 
     </style>
@@ -52,6 +33,7 @@
 
     <style name="TextAppearance.Shrine.Toolbar" parent="TextAppearance.MaterialComponents.Button">
         <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="Widget.Shrine.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -67,10 +49,11 @@
 
     <style name="Widget.Shrine.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <item name="backgroundTint">?attr/colorPrimaryDark</item>
-        <item name="android:stateListAnimator" tools:ignore="NewApi">
+        <!--<item name="backgroundTint">@drawable/ic_button_states</item>-->
+        <!--<item name="backgroundTint" tools:ignore="NewApi">@drawable/ic_button_states</item>-->
+        <!--<item name="android:stateListAnimator" tools:ignore="NewApi">
             @animator/shr_next_button_state_list_anim
-        </item>
+        </item>-->
     </style>
 
     <style name="Widget.Shrine.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
@@ -86,6 +69,21 @@
 
     <style name="Widget.Shrine.Backdrop" parent="">
         <item name="android:background">?attr/colorAccent</item>
+    </style>
+
+    <style name="TextviewAppearance.Home.Selected" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/rectangle_solid_button</item>
+    </style>
+
+    <style name="TextviewAppearance.Home.NotSelected" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/rectangle_border_button</item>
+    </style>
+
+    <style name="TextviewAppearance.Home.Disabled" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/gray_500</item>
+        <item name="android:background">@drawable/rectangle_solid_button_disabled</item>
     </style>
 
 </resources>

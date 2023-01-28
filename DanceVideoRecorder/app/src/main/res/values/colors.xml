@@ -15,6 +15,7 @@
     <color name="pink_600">#D81B60</color>
     <color name="pink_300">#FF5C8D</color>
 
+    <color name="gray_900">#272525</color>
     <color name="gray_700">#5A5A5A</color>
     <color name="gray_500">#969696</color>
     <color name="gray_400">#B6B6B6</color>
@@ -70,6 +71,17 @@
     <color name="reply_black_900_alpha_060">#99000000</color>
 
     <color name="nav_bar">@color/reply_black_900_alpha_020</color>
+
+    <color name="button_disabled">#DADADA</color>
+
+    <color name="new_primary">#1d3557</color>
+    <color name="new_on_primary">#1d3557</color>
+    <color name="new_secondary">#ffffffff</color>
+    <color name="new_on_secondary">#ffffff</color>
+
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
 
 
 </resources>

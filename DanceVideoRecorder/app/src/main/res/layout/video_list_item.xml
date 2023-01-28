@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_gradient3">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <!--<include
+                android:id="@+id/error_layout"
+                layout="@layout/video_error_layout"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:elevation="2dp"/>-->
+
+            <ImageView
+                android:id="@+id/video_image"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:src="@drawable/ic_error_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/play_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_play_video"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:id="@+id/video_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Video Name"
+                    android:textSize="16sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/gray_300"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/size_length_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/video_name"
+                    app:layout_constraintBottom_toTopOf="@id/delete_share_layout"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/video_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:0000"
+                        android:textSize="14sp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:visibility="gone"
+                        android:textColor="@color/gray_300"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/video_length"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/video_length"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="2:00"
+                        android:textSize="14sp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:gravity="center"
+                        android:textColor="@color/gray_300"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/share_button"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@id/video_date"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/share_button"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:src="@drawable/ic_share_logo"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/video_length"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/delete_share_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/size_length_layout"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/video_size"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="2MB"
+                        android:textSize="14sp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:gravity="center"
+                        android:textColor="@color/gray_300"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/delete_button"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/delete_button"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_delete_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/video_size"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
